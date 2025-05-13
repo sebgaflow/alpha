@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Formulario Airtable</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+  <style>
+    html{margin:0;padding:0;height:100%;overflow:hidden;}
+    body{
+      font-family:'Inter',sans-serif;background:#fff;margin:0;
+      padding:20px;height:100%;overflow-y:auto;overflow-x:hidden;
+      box-sizing:border-box;
+    }
+    .container{
+      max-width:600px;margin:auto;background:#fff;
+      padding:30px;border-radius:20px;
+      box-shadow:0 4px 12px rgba(0,0,0,0.1);
+    }
+    select,input{
+      width:100%;padding:12px;margin-bottom:15px;font-size:16px;
+      border:1px solid #ccc;border-radius:10px;box-sizing:border-box;
+    }
+    button{
+      background:#8e8e93;color:#fff;padding:14px;border:none;
+      border-radius:12px;font-size:16px;cursor:pointer;width:100%;
+    }
+    #mensaje{margin-top:20px;font-weight:bold;text-align:center;}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Formulario de Registro</h2>
+    <form id="formulario">
+      <!-- Dependencia -->
+      <select id="dependencia" name="dependencia" required>
+        <option value="">Selecciona una dependencia</option>
+      </select>
+
+      <!-- Promotor filtrado -->
+      <select id="promotor" name="promotor" required>
+        <option value="">Selecciona un promotor</option>
+      </select>
+
+      <!-- Datos personales -->
+      <input name="nombres"    placeholder="Nombre(s)"            required>
+      <input name="apellido1"  placeholder="Primer Apellido"      required>
+      <input name="apellido2"  placeholder="Segundo Apellido"     required>
+      <input name="calle"      placeholder="Calle"                required>
+      <input name="numext" type="number" placeholder="Número exterior" required>
+      <input name="numint"     placeholder="Número interior">
+      <input name="colonia"    placeholder="Colonia"              required>
+      <input name="cp" type="number"  placeholder="Código postal" required>
+      <input name="seccion" type="number" placeholder="Clave de sección" required>
+      <input name="telefono"   placeholder="Teléfono a 10 dígitos" required>
+
+      <button type="submit">Enviar</button>
+    </form>
+    <div id="mensaje"></div>
+  </div>
+
+  <script defer src="form.js"></script>
+</body>
+</html>
